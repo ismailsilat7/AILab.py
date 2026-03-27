@@ -10,7 +10,7 @@ class GoalBasedAgent:
     
     def IDDFS(self, graph, percept, goal, max_depth=50):
 
-        for depth in range(max_depth):
+        for depth in range(1,max_depth):
             print(f"Current Depth: {depth}")
             path = []
             if self.dls(graph, percept, goal, depth, path):
@@ -30,16 +30,15 @@ class GoalBasedAgent:
         if current_node not in graph:
             return False
         for neighbor in graph[current_node]:
-            if neighbor not in path:
-                if self.dls(graph, neighbor, goal, depth-1, path):
-                    path.append(neighbor)
-                    return True
+            if self.dls(graph, neighbor, goal, depth-1, path):
+                path.append(current_node)
+                return True
         return False
 
 
     def act(self, percept, graph):
         goal_status = self.formulate_goal(percept)
-        if goal_status == "Goal reached":
+        if goal_status == "Goal Reached":
             return f"Goal {self.goal} found!"
         return self.IDDFS(graph, percept, self.goal)
 
@@ -56,6 +55,7 @@ graph = {
     'R3' : ['R2', 'R6'],
     'R4' : ['R1', 'R5', 'R7'],
     'R5' : ['R2', 'R4', 'R6', 'R8'],
+    'R6': ['R3', 'R5', 'R9'],
     'R7' : ['R4', 'R8'],
     'R8' : ['R5', 'R7', 'R9'],
     'R9' : ['R6', 'R8'],
