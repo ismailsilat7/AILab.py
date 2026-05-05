@@ -32,18 +32,13 @@ def valid_pos(pos):
 
 def get_neighbors(pos):
     neighbors = []
-    up = (pos[0] - 1, pos[1])
-    if valid_pos(up):
-        neighbors.append(up)  
-    down = (pos[0] + 1, pos[1])
-    if valid_pos(down):
-        neighbors.append(down)
-    left = (pos[0], pos[1] - 1)
-    if valid_pos(left):
-        neighbors.append(left)
-    right = (pos[0], pos[1] + 1)
-    if valid_pos(right):
-        neighbors.append(right)
+    moves = [(0,1), (0,-1), (1,0), (-1,0)]
+    i,j = pos
+    for dx,dy in moves:
+        x = i + dx
+        y = j + dy
+        if 0 <= x < N and 0 <= y < N and grid[i][j] != 1:
+            neighbors.append((x,y))
     return neighbors
 
 
