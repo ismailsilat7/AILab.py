@@ -1,0 +1,21 @@
+ID,MonthlyCharges,ContractType,Tenure,InternetService,SupportCalls,Churn
+1,85,Month-to-Month,5,Fiber Optic,6,1
+2,45,Two Year,36,DSL,1,0
+3,70,One Year,18,DSL,2,0
+4,95,Month-to-Month,3,Fiber Optic,7,1
+5,60,One Year,24,DSL,2,0
+6,80,Month-to-Month,6,Fiber Optic,5,1
+7,40,Two Year,48,None,0,0
+8,75,Month-to-Month,10,DSL,4,1
+9,55,One Year,30,DSL,1,0
+10,90,Month-to-Month,2,Fiber Optic,8,1
+11,50,Two Year,40,None,0,0
+12,65,One Year,20,DSL,2,0
+13,88,Month-to-Month,4,Fiber Optic,6,1
+14,42,Two Year,50,None,1,0
+15,78,Month-to-Month,8,Fiber Optic,5,1
+16,58,One Year,28,DSL,2,0
+17,92,Month-to-Month,1,Fiber Optic,9,1
+18,47,Two Year,45,None,0,0
+19,68,One Year,22,DSL,3,0
+20,83,Month-to-Month,7,Fiber Optic,6,1
